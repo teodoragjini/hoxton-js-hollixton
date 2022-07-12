@@ -1,8 +1,88 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  padding: 0.5rem  1rem ;
+}
+
+.header-logo{
+  color: #28385c;
+  font-weight: bolder;
+}
+
+.header-left{
+  display: grid;
+  grid-auto-flow: column ;
+  align-items: center;
+  justify-content: left;
+  gap: 1rem;
+}
+
+.header-nav-list{
+  list-style: none;
+  display: grid;
+  grid-auto-flow: column;
+  gap:1rem;  
+}
+
+.header-nav-item{
+  color: #293a5e;
+  font-weight: bolder;
+}
+
+.header-right{
+  display: grid;
+  justify-content: right;
+  align-items: center;
+}
+
+.product-container{
+ display: grid;
+ grid-template-columns: repeat(4,auto);
+ gap: 0.5rem;
+ margin-top: 4rem;
+}
+
+.product-container div > img{
+  height: 250px;
+}
+
+.home-main{
+  justify-content: left;
+}
+
+.name{
+  color: #213258;
+  font-weight: bolder;
+}
+
+.first-price{
+  text-decoration: line-through;
+  color: #8c95a8;
+  font-weight: bolder;
+  margin-top: 1rem;
+}
+
+.discountedPrice{
+  color: red;
+  font-weight: bolder;
+}
+
+.price{
+  font-weight: bolder;
+  color: #213258;
+  margin-top: 1rem;
 }
