@@ -282,5 +282,48 @@ function handlePersonInfoModal() {
     });
 }
 
+function renderProducts() {
+  let mainEl = document.createElement('main')
+  
+  let h3El = document.createElement('h3')
+  h3El.className = "home-main"
+  h3El.textContent = 'Home'
+
+  let productContainer = document.createElement("div");
+  productContainer.className = 'product-container'
+
+  for (let product of state.store) {
+    let productItem = document.createElement("div");
+
+    let productImg = document.createElement("img");
+    productImg.src = product.image;
+
+    let productName = document.createElement("p");
+    productName.className = "name";
+    productName.textContent = product.name;
+
+    let productPrice = document.createElement("p");
+    productPrice.className = "price";
+    productPrice.textContent = product.price.toString();
+
+    productItem.append(productImg, productName, productPrice);
+
+    if (product.discountedPrice) {
+      let productDiscountedPrice = document.createElement("p");
+      productDiscountedPrice.className = "discountedPrice";
+      productDiscountedPrice.textContent = product.discountedPrice.toString();
+      productItem.append(productDiscountedPrice);
+    }
+
+    productContainer.append(productItem);
+  }
+
+  mainEl.append(h3El, productContainer);
+
+  document.querySelector("#app").append(mainEl)
+}
+
+
+
 renderHeader();
-handlePersonInfoModal();
+renderProducts();
