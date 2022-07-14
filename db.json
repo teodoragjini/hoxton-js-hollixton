@@ -118,17 +118,17 @@
   ],
   "users": [
     {
-      "firstName": "Nicolas",
-      "lastName": "Marcora",
-      "id": "nicolas@email.com",
-      "password": "nicolas",
+      "firstName": "Teodora",
+      "lastName": "Gjini",
+      "id": "teodora@email.com",
+      "password": "teodora",
       "bag": []
     },
     {
-      "firstName": "Paola",
-      "lastName": "Moreira",
-      "id": "paola@email.com",
-      "password": "paola",
+      "firstName": "Erotida",
+      "lastName": "Gjini",
+      "id": "erotida@email.com",
+      "password": "erotida",
       "bag": []
     }
   ]
